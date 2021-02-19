@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "lib": ["es2018"], // Node.js v10 doesn't support all runtime features of ES2019 like Symbol#description
+    "types": ["node"],
+    "module": "commonjs",
+    "importHelpers": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "rootDir": ".",
+    "plugins": [
+      { "name": "@fimbul/mithotyn", "displayErrorsAsWarnings": true },
+    ],
+    "newLine": "lf"
+  }
+}

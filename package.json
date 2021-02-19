@@ -1,0 +1,40 @@
+{
+  "name": "@fimbul/circular",
+  "version": "0.0.1",
+  "description": "Angular integration of the Fimbullinter project",
+  "builders": "./builders/builders.json",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fimbullinter/circular"
+  },
+  "keywords": [
+    "angular",
+    "devkit",
+    "builder",
+    "linter",
+    "lint",
+    "wotan",
+    "fimbullinter",
+    "typescript"
+  ],
+  "author": "Klaus Meinhardt",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/fimbullinter/circular/issues"
+  },
+  "homepage": "https://github.com/fimbullinter/curcular#readme",
+  "scripts": {
+    "compile": "tsc",
+    "lint": "wotan"
+  },
+  "dependencies": {
+    "@fimbul/wotan": ">=0.24.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/architect": "^0.1102.1",
+    "typescript": "^4.1.5"
+  }
+}

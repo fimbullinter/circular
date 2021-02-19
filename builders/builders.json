@@ -1,0 +1,9 @@
+{
+  "builders": {
+    "lint": {
+      "implementation": "./lint",
+      "schema": "./lint/schema.json",
+      "description": "Lints the project using Fimbullinter."
+    }
+  }
+}
