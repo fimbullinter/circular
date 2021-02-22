@@ -2,3 +2,6 @@
 /*.json
 /.*
 *.ts
+*.fimbullintercache
+*.tsbuildinfo
+/yarn.lock
