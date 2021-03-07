@@ -19,6 +19,15 @@ import * as path from 'path';
 import * as yaml from 'js-yaml';
 
 async function lint(rawOptions: Partial<ParsedGlobalOptions>, context: BuilderContext): Promise<BuilderOutput> {
+    if (!('project' in rawOptions) && context.target) {
+        const project: string[] = [];
+        for (const target of ['build', 'test']) {
+            try {
+                project.push((await context.getTargetOptions({project: context.target.project, target})).tsConfig as string);
+            } catch {}
+        }
+        rawOptions = {project, ...rawOptions};
+    }
     const globalOptionsPath = path.join(context.workspaceRoot, '.fimbullinter.yaml');
     try {
         rawOptions = {...yaml.load(await fs.readFile(globalOptionsPath, {encoding: 'utf-8'})) as object, ...rawOptions};
